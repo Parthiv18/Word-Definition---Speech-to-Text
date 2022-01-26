@@ -7,7 +7,7 @@ def word(URL,query):
     text = query.split(' ')
     if(text[0]=="define" or text[1]=="of" or text[1]=="is"): # [define ...] [what is ...] [definition of ...] [meaning of ...]
         return URL + str(text[-1]) 
-    elif(text[-1]=="is"or text[-1]=="mean"): # [meaning of this ... is] [what does ... mean]
+    elif(text[-1]=="is"or text[-1]=="means"): # [meaning of this ... is] [what does ... means]
         return URL + str(text[-2])
     elif(text[-1]=="meaning"): # [... meaning] 
         return URL + str(text[0]) 
