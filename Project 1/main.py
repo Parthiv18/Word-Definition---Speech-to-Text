@@ -5,6 +5,11 @@ import requests
 # mean - print (title)
 # dont say mean - print(what i said)
 
+# definiation of .... [find index of OF +1 OR ... is at -1]
+# what is the def of .... [find index of OF +1 OR ... is at -1]
+# meaning of ... [find index of OF +1 OR ... is at -1]
+# what does ... mean [find index of mean -1  OR -2]
+
 r = sr.Recognizer()
 with sr.Microphone() as source:
     print("Listening......")
@@ -17,7 +22,7 @@ try:
     query = r.recognize_google(audio, language='en-in')
     print(f"USER: {query}\n")
         
-    #store it in array
+    #store it in array    
     text = query.split(' ')
 
     #parse website
@@ -34,6 +39,7 @@ try:
         print(span.text)
         #print(counter)
         counter = counter + 1
+
 except Exception:
     print(Exception) 
 
