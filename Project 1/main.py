@@ -11,7 +11,7 @@ def word(URL,query):
         return URL + str(text[-2])
     elif(text[-1]=="meaning"): # [... meaning] 
         return URL + str(text[0]) 
-    return URL + str(text[2])
+    return URL
 
 # Setting up Mic
 r = sr.Recognizer()
