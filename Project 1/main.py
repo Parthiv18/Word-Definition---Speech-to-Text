@@ -30,14 +30,16 @@ try:
     r1 = requests.get(str(word("https://www.merriam-webster.com/dictionary/",query)))
     
     # Begin parse
-    soup = BeautifulSoup(r1.text, 'html.parser') # If this line causes an error, run 'pip install html5lib' or install html5lib
-    #print(soup.span) #soup.find_all("span", class_="dtText") soup.find_all('span', attrs={'class': 'dtText'})
-    ram = soup.find('span', {'class': 'dtText'}) #('span', {'class': 'sb-0'})     
+    soup = BeautifulSoup(r1.text, 'html.parser') # If this line causes an error, run 'pip install html5lib' or install html5lib    
+    ram = soup.find_all('span', {'class': 'dtText'}) #('span', {'class': 'sb-0'})    find 
     
     # Counter for Test 
     # Loop to print definition
+    emp = []
     for span in ram:        
-        print(span.text)
+        #print(span.text)
+        emp.append(span.text) 
+    print(*emp, sep="\n")
 
 except Exception:
     print(Exception) 
